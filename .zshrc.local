@@ -1,0 +1,48 @@
+# morris' local changes to the awesome .zshrc
+#
+# ======== options ========
+# do not save commands with leading space in history
+setopt HIST_IGNORE_SPACE
+
+# ======== aliases ========
+
+# 'sshot'   open gnome-screenshot and draw an area on the screen 
+#           to be saved in ./screenshot.png
+alias sshot='gnome-screenshot --area --file=screenshot.png 2>/dev/null'
+
+# 'naut'    open the GNOME filemanager in the current directory
+alias naut='nautilus . 2>/dev/null'
+
+# 'pingg'   ping google.
+alias pingg='ping -c 3 www.google.com'
+alias ping='ping -c 3'
+
+# '..'      walk up the directory-tree more handily
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+
+# 'fgrep'   search the whole directory tree
+fgrep(){
+    find . -name $1 -type f -exec grep --color $2 {} +
+}
+
+# 'gl'      git pretty-print
+alias gl='git log --oneline --graph --decorate --all'
+
+# 'py'      shortcuts to the correct python version
+alias py=/usr/bin/python3
+alias python=/usr/bin/python3
+
+# ====== additional PATHs ======
+
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/bin" ] ; then
+    PATH="$HOME/bin:$PATH"
+fi
+
+# i dunno what this was for..
+if [ -f ~/.config/exercism/exercism_completion.zsh ]; then
+    . ~/.config/exercism/exercism_completion.zsh
+fi
+
