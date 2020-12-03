@@ -24,7 +24,7 @@ alias ....='cd ../../..'
 
 # 'fgrep'   search the whole directory tree
 fgrep(){
-    find . -name $1 -type f -exec grep --color $2 {} +
+    find . -name "*.$1" -type f -exec grep -E --color "$2" {} +
 }
 
 # 'gl'      git pretty-print
