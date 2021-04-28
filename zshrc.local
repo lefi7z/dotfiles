@@ -27,6 +27,9 @@ fgrep(){
     find . -name "*.$1" -type f -exec grep -E --color "$2" {} +
 }
 
+# 'l1'      ls pretty-print
+alias l1='ls -1'
+
 # 'gl'      git pretty-print
 alias gl='git log --oneline --graph --decorate --all'
 
