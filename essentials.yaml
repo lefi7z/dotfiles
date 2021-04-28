@@ -1,0 +1,10 @@
+- hosts: notebooks
+  become: yes
+  tasks:
+    - name: install essential packages (t.b.c.)
+      apt:
+        name: "{{ item }}"
+        state: present
+      loop:
+        - tree
+        - htop
