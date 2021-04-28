@@ -1,0 +1,31 @@
+session_name: 'office'
+start_directory: '~/office'
+windows:
+- window_name: cmd
+  start_directory: './code/aspect'
+- window_name: aspect
+  layout: main-vertical
+  start_directory: './code/aspect'
+  focus: 'true'
+  panes:
+  - shell_command: vim
+    focus: 'true'
+- window_name: build
+  layout: main-vertical
+  start_directory: './code/aspect/build'
+  focus: 'true'
+  panes:
+  - focus: 'true'
+  - htop
+- window_name: test
+  layout: main-vertical
+  start_directory: './code/aspect/aspectPY'
+  options: {}
+  panes:
+  - shell_command: htop
+  - 
+- window_name: vpn
+  panes:
+  - barracudavpn --start --login Moritz.Koenemann && barracudavpn --status && echo testing DNS... && host vmtu2.ionicon.local
+- window_name: ide
+  start_directory: '~/.local/clion-2020.3.3/bin'

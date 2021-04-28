@@ -1,0 +1,12 @@
+session_name: strofeld
+start_directory: ~/code/strofeld/website
+windows:
+  - window_name: dev
+    layout: main-vertical
+    panes:
+      - vim
+      -
+  - window_name: serve
+    panes:
+      - bundle exec jekyll serve
+

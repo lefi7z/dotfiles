@@ -1,0 +1,12 @@
+session_name: panes
+windows:
+- window_name: dev
+  start_directory: ~/code
+  layout: main-vertical
+  shell_command_before:
+    - cd ~/
+  panes:
+    - shell_command:
+        - tail -f /var/log/syslog
+    - ssh raspberrypi.local
+    - vim
