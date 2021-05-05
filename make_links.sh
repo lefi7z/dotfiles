@@ -3,6 +3,8 @@ set -xv
 
 CUR_DIR=$(pwd)
 
+ln -s ${CUR_DIR}/vimrc ~/.vimrc
+
 ln -s ${CUR_DIR}/zshrc ~/.zshrc
 ln -s ${CUR_DIR}/zshrc.local ~/.zshrc.local
 
