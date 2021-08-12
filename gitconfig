@@ -1,0 +1,40 @@
+[user]
+	name = Moritz Koenemann
+	email = moritz.k-man@arcor.de
+[push]
+	default = simple
+[diff]
+    tool = meld
+[difftool]
+    prompt = false
+[difftool "meld"]
+    cmd = meld $LOCAL $REMOTE
+[merge]
+#    tool = meld
+    tool = vimdiff
+[mergetool "meld"]
+#    cmd = meld "$LOCAL" "$BASE" "$REMOTE"
+#    cmd = meld "$LOCAL" "$BASE" "$REMOTE" --output "$MERGED"
+#    cmd = meld "$LOCAL" "$MERGED" "$REMOTE" --output "$MERGED"
+    cmd = meld $LOCAL $MERGED $REMOTE
+[alias]
+	lg = log --graph --pretty=format:'%C(yellow)%h%Creset - %Cgreen(%cr)%Creset %Cblue<%an>%Creset %s' --abbrev-commit --date=relative
+	st = status
+	cm = commit -m
+	cam = commit -am
+	diffs = diff --stat
+	shows = show --stat
+	nomerge = merge --no-ff --no-edit
+[sendpack]
+	sideband = false
+[mergetool]
+	keepBackup = false
+[filesystem "N/A|13|/dev/mapper/vgubuntu-root"]
+	timestampResolution = 12000 nanoseconds
+	minRacyThreshold = 5348 microseconds
+[core]
+	editor = vim
+[credential]
+	helper = /usr/share/doc/git/contrib/credential/libsecret/git-credential-libsecret
+[interactive]
+	singleKey = true
