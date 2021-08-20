@@ -1,0 +1,22 @@
+# This is Git's per-user configuration file.
+[user]
+	name = Moritz Koenemann
+	email = moko@infpro.com
+[difftool]
+	prompt = false
+[merge]
+	tool = vimdiff
+#[mergetool "vimdiff"]
+#	cmd = 
+[alias]
+	lg = log --graph --pretty=format:'%C(yellow)%h%Creset - %Cgreen(%cr)%Creset %Cblue<%an>%Creset %s' --abbrev-commit --date=relative
+	st = status
+	cm = commit -m
+	cam = commit -am
+	diffs = diff --stat
+	shows = show --stat
+	nomerge = merge --no-ff --no-edit
+[core]
+	editor = vim
+[interactive]
+	singleKey = true
